@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+/* Lexend Deca 400, Big Shoulders Display 700 */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --brightorange: hsl(31, 77%, 52%);
+  --darkcyan: hsl(184, 100%, 22%);
+  --verydarkcyan: hsl(179, 100%, 13%);
+  --transparentwhite: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+  --verylightgray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  color: var(--transparentwhite);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3 1fr);
+  width: 80vw;
+  margin: 30px;
+}
+
+.sedans,
+.suvs,
+.luxury {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2rem;
+  color: var(--verylightgray);
+}
+
+.text {
+  color: var(--transparentwhite);
+}
+
+.icon {
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  line-height: 1.5rem;
+}
+
+.sedans {
+  background-color: var(--brightorange);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.suvs {
+  background-color: var(--darkcyan);
+}
+
+.luxury {
+  background-color: var(--verydarkcyan);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+button {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 2rem;
+  border-color: var(--verylightgray);
+  border-style: solid;
+  width: 60%;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sedansbutton {
+  color: var(--brightorange);
+}
+
+.sedansbutton:hover {
+  background-color: var(--brightorange);
+  color: var(--verylightgray);
+}
+
+.suvsbutton {
+  color: var(--darkcyan);
+}
+
+.suvsbutton:hover {
+  background-color: var(--darkcyan);
+  color: var(--verylightgray);
+}
+
+.luxurybutton {
+  color: var(--verydarkcyan);
+}
+
+.luxurybutton:hover {
+  background-color: var(--verydarkcyan);
+  color: var(--verylightgray);
+}
+
+@media (min-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .sedans {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .luxury {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}
